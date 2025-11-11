@@ -13,20 +13,21 @@
     <h1>Where in the world?</h1>
     <button id='theme-toggle'>Dark Mode</button>
   </header>
-  <main id="main">
-    <template id="card-template">
-      <div id="card">
-        <a href="">
-          <img src="" alt="" />
-          <h2></h2>
-          <ul>
-            <li id="population"></li>
-            <li id="region"></li>
-            <li id="capital"></li>
-          </ul>
-        </a>
-      </div>
-    </template>
+  <section class="navbar">
+    <input type="search" name="search" id="search" placeholder="Choose your country by name" />
+    <select name="region" id="region">
+      <option value="">All Regions</option>
+      <option value="Africa">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
+    </select>
+  </section>
+
+  <section id="grid" class="grid"></section>
+  <main id="container">
+    <section ></section>
   </main>
   <script type="module" src="src/main.ts"></script>
 </body>

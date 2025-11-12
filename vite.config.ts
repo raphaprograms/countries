@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
-export default defineConfig({
-  base: '/countries/', // EXACT repo name (case-sensitive)
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/countries/' : '/',
+  server: {
+    open: '/',
+  },
   build: {
     outDir: 'docs',
     rollupOptions: {
@@ -12,4 +15,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));

@@ -5,7 +5,7 @@ export type RestCountryDetail = {
         nativeName?: Record<string, {official?: string; common?: string }>;
     }
     flags: {png?: string; svg?: string; alt?: string };
-    populations?: number;
+    population?: number;
     region?: string;
     subregion?: string;
     capital?: string[];
@@ -69,7 +69,7 @@ export function toCountryDetail(country: RestCountryDetail): CountryDetail {
         nativeName: native?.official ?? native?.common ?? null,
         flagSrc: country.flags.png ?? country.flags.svg ?? '',
         flagAlt: country.flags.alt ?? `${country.name.common ?? 'Country'} flag`,
-        population: country.populations ?? null,
+        population: country.population ?? null,
         region: country.region ?? null,
         subregion: country.subregion ?? null,
         capital: country.capital?.[0] ?? null,
